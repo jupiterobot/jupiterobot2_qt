@@ -40,7 +40,7 @@ class PlayThread(QThread):
 
     def run(self):
         if not os.path.exists(self.audio_path):
-            print("音频文件不存在")
+            print("Audio file not found")
             self.finished.emit()
             return
 
@@ -84,7 +84,7 @@ class Main_window(Ui_MainWindow, QMainWindow):
         self.cap_arm = cv2.VideoCapture(pkg_path+"/resource/jupiter2_sim_arm_show.mp4")
         self.cap_nav = cv2.VideoCapture(pkg_path+"/resource/jupiter2_sim_nav_show.mp4")
         if not self.cap_arm.isOpened() or not self.cap_nav.isOpened():
-            print("无法打开视频文件")
+            print("Video file not found")
             return
         
         self.arm_timer = QTimer()
@@ -166,18 +166,18 @@ class Main_window(Ui_MainWindow, QMainWindow):
 
     def qwen_chat_in(self):
         self.qwen_play.setEnabled(False)
-        self.qwen_play.setText("等待结果...")
+        self.qwen_play.setText("Waiting for result...")
         if self.is_playing:
             self.stop_playback(1)
-        QTimer.singleShot(1000, lambda: self.qwen_out.setText("聆听中..."))
+        QTimer.singleShot(1000, lambda: self.qwen_out.setText("Listerning..."))
         qwen_in()
 
     def qwen_img_in1(self):
         self.qwen_img_play.setEnabled(False)
-        self.qwen_img_play.setText("等待结果...")
+        self.qwen_img_play.setText("Waiting for result...")
         if self.is_playing:
             self.stop_playback(2)
-        QTimer.singleShot(1000, lambda: self.qwen_img_out.setText("聆听中..."))
+        QTimer.singleShot(1000, lambda: self.qwen_img_out.setText("Listerning..."))
         qwen_img_in()
 
     def update_qwen_label(self,msg):
@@ -194,7 +194,7 @@ class Main_window(Ui_MainWindow, QMainWindow):
 
     def update_qwen_question_label(self,msg):
         if msg.data:
-            new_text = '=== 问题 ===\n'+msg.data 
+            new_text = '=== Question ===\n'+msg.data 
             self.qwen_out.setText(new_text)
 
     def update_qwen_img_question_label(self,msg):
@@ -207,20 +207,20 @@ class Main_window(Ui_MainWindow, QMainWindow):
 
         if mp3_file:
             self.qwen_play.setEnabled(True)
-            print("\n===开始播放===\n")
+            print("\n=== Start Playback ===\n")
             self.start_playback(mp3_file, num=1)
         else:
-            print("\n===找不到音频===\n")
+            print("\n=== Audio not found ===\n")
 
     def play_img_result(self, msg):
         mp3_file = msg.data 
 
         if mp3_file:
             self.qwen_img_play.setEnabled(True)
-            print("\n===开始播放===\n")
+            print("\n=== Start Playback ===\n")
             self.start_playback(mp3_file, num=2)
         else:
-            print("\n===找不到音频===\n")
+            print("\n===Audio not found===\n")
 
 
     def start_playback(self, file_path, num):
@@ -269,7 +269,7 @@ class Main_window(Ui_MainWindow, QMainWindow):
         重写 closeEvent：防止窗口被关闭
         """
         if not self.allow_close:
-            print("需要关闭界面请在终端按下ctrl+c")
+            print("Press Ctrl+C to close terminal")
             event.ignore()  # 忽略关闭事件，窗口不会消失
             if not self.isFullScreen():
                 self.showFullScreen()
@@ -401,14 +401,14 @@ class Main_window(Ui_MainWindow, QMainWindow):
 
     def xf_iat(self):
         if self.is_recording:
-            print("正在录音中，请勿重复点击")
+            print("Recording in progress, please do not press repeatatively")
             return
 
         self.is_recording = True
         self.o1_2.setEnabled(False)
 
         cmd2 = 'source /opt/ros/noetic/setup.bash && source ~/catkin_ws/devel/setup.bash && rostopic pub -1 /voiceWakeup std_msgs/String "data: ``"'
-        os.system(f"bash -c '{cmd2}' &")  # 无终端
+        os.system(f"bash -c '{cmd2}' &")  # No Terminal
         # 在新终端运行命令
         # os.system(f"gnome-terminal --window -e 'bash -c \"{cmd2};\"'")
 
@@ -423,16 +423,16 @@ class Main_window(Ui_MainWindow, QMainWindow):
 
 
     def show_processing_message(self):
-        self.label_11.setText("录音中...")
+        self.label_11.setText("Recording...")
 
     def update_label_result(self, result):
         self.get_msg = True
 
-        print("收到识别结果：", result.data)  # 调试信息
+        print("Recognition result received:", result.data)  # 调试信息
         if result.data:
             self.label_11.setText(result.data)
         else:
-            self.label_11.setText("未识别到内容")
+            self.label_11.setText("Recongnition is not successful")
 
         # 恢复按钮
         self.is_recording = False
@@ -443,8 +443,8 @@ class Main_window(Ui_MainWindow, QMainWindow):
             return
         else:
             """超时处理：未收到任何语音识别结果"""
-            print("语音识别超时，未收到结果")
-            self.label_11.setText("识别超时或无输入")
+            print("Overtime or no result")
+            self.label_11.setText("Overtime or no input")
 
             # 恢复按钮
             self.is_recording = False

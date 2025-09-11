@@ -16,7 +16,7 @@ class qwen_img_chat(object):
 
         # 初始化 OpenAI 客户端（使用 DashScope）
         self.client = OpenAI(
-            api_key="sk-184336ce18704d34a3b75e147039f05d",
+            api_key="Insert your API Key here",
             base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
         )
 
@@ -64,8 +64,8 @@ class qwen_img_chat(object):
                 stream_options={"include_usage": True}
             )
             content = ''
-            print("Qwen 回复：")
-            self.pub_msg = "\n=== 大模型回答 ===\n"
+            print("LLM replies:")
+            self.pub_msg = "\n=== Q and A with LLM ===\n"
             rospy.sleep(1)
             self.pub.publish(self.pub_msg)
             for chunk in completion:
@@ -88,7 +88,7 @@ class qwen_img_chat(object):
             
 
         except Exception as e:
-            rospy.logerr("调用 Qwen 出错：%s", str(e))
+            rospy.logerr("LLM error: %s", str(e))
 
     # 图像回调函数
     def image_callback(self, msg):
@@ -98,7 +98,7 @@ class qwen_img_chat(object):
                 # cv_image = cv2.resize(cv_image, (1280, 720))
 
             # 保存图像
-            rospy.loginfo("正在保存图像到 %s", self.SAVE_PATH)
+            rospy.loginfo("Save image to %s", self.SAVE_PATH)
             cv2.imwrite(self.SAVE_PATH, cv_image)
 
 
@@ -108,17 +108,17 @@ class qwen_img_chat(object):
             
 
         except CvBridgeError as e:
-            rospy.logerr("CvBridge 错误: %s", e)
+            rospy.logerr("CvBridge error: %s", e)
         except Exception as e:
-            rospy.logerr("处理图像出错: %s", e)
+            rospy.logerr("Image processing error: %s", e)
 
     # /voiceWords 话题回调函数
     def voice_words_callback(self, msg):
 
         self.prompt = msg.data
-        rospy.loginfo("接收到提示词: %s", self.prompt)
+        rospy.loginfo("Received Prompt Text: %s", self.prompt)
 
-        self.pub_msg = '=== 问题 ===\n'+msg.data
+        self.pub_msg = '=== Question ===\n'+msg.data
         self.pub_q.publish(self.pub_msg)
 
         # 获取图像

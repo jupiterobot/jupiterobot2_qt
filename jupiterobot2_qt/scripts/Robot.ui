@@ -61,14 +61,14 @@
         <widget class="QPushButton" name="O5">
          <property name="font">
           <font>
-           <pointsize>30</pointsize>
+           <pointsize>24</pointsize>
           </font>
          </property>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="text">
-          <string>大模型交互</string>
+          <string>LLM Interaction</string>
          </property>
         </widget>
        </item>
@@ -76,14 +76,14 @@
         <widget class="QPushButton" name="O3">
          <property name="font">
           <font>
-           <pointsize>30</pointsize>
+           <pointsize>24</pointsize>
           </font>
          </property>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="text">
-          <string>图像处理</string>
+          <string>Computer Vision</string>
          </property>
         </widget>
        </item>
@@ -91,14 +91,14 @@
         <widget class="QPushButton" name="O1">
          <property name="font">
           <font>
-           <pointsize>30</pointsize>
+           <pointsize>24</pointsize>
           </font>
          </property>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="text">
-          <string> 语音合成与识别 </string>
+          <string>Speech Interaction</string>
          </property>
         </widget>
        </item>
@@ -106,14 +106,14 @@
         <widget class="QPushButton" name="O6">
          <property name="font">
           <font>
-           <pointsize>30</pointsize>
+           <pointsize>24</pointsize>
           </font>
          </property>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="text">
-          <string>人机交互</string>
+          <string>HRI</string>
          </property>
         </widget>
        </item>
@@ -124,14 +124,14 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>30</pointsize>
+           <pointsize>24</pointsize>
           </font>
          </property>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="text">
-          <string>机械臂控制</string>
+          <string>Robot Arm</string>
          </property>
         </widget>
        </item>
@@ -139,14 +139,14 @@
         <widget class="QPushButton" name="O7">
          <property name="font">
           <font>
-           <pointsize>30</pointsize>
+           <pointsize>24</pointsize>
           </font>
          </property>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="text">
-          <string>仿真建图导航</string>
+          <string>Navigation</string>
          </property>
         </widget>
        </item>
@@ -177,7 +177,7 @@
        <cursorShape>ArrowCursor</cursorShape>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="o1">
        <layout class="QGridLayout" name="gridLayout_7">
@@ -225,7 +225,7 @@
              </font>
             </property>
             <property name="text">
-             <string>语音识别结果：</string>
+             <string>Speech Recognition</string>
             </property>
            </widget>
           </item>
@@ -288,7 +288,7 @@ background-image: url(:/media/语音识别.png);</string>
              </font>
             </property>
             <property name="text">
-             <string>语音合成内容：</string>
+             <string>Speech Synthesis</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -1210,14 +1210,14 @@ background-image: url(:/media/语音识别.png);</string>
               </property>
               <property name="font">
                <font>
-                <pointsize>50</pointsize>
+                <pointsize>35</pointsize>
                </font>
               </property>
               <property name="cursor">
                <cursorShape>PointingHandCursor</cursorShape>
               </property>
               <property name="text">
-               <string>语音合成</string>
+               <string>Speech Synthesis</string>
               </property>
              </widget>
             </item>
@@ -1251,14 +1251,14 @@ background-image: url(:/media/语音识别.png);</string>
               </property>
               <property name="font">
                <font>
-                <pointsize>50</pointsize>
+                <pointsize>35</pointsize>
                </font>
               </property>
               <property name="cursor">
                <cursorShape>PointingHandCursor</cursorShape>
               </property>
               <property name="text">
-               <string>语音识别</string>
+               <string>Speech Recognition</string>
               </property>
              </widget>
             </item>
@@ -1375,10 +1375,13 @@ background-image: url(:/media/语音识别.png);</string>
                </font>
               </property>
               <property name="text">
-               <string>Yolo物体识别加载时间较长，请耐心等待...</string>
+               <string>YOLO object recognition requires longer time to load, please wait patiently...</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1451,14 +1454,14 @@ background-image: url(:/media/语音识别.png);</string>
             </property>
             <property name="font">
              <font>
-              <pointsize>50</pointsize>
+              <pointsize>30</pointsize>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
-             <string>人脸关键点</string>
+             <string>Face Landmark Detection</string>
             </property>
            </widget>
           </item>
@@ -1466,14 +1469,14 @@ background-image: url(:/media/语音识别.png);</string>
            <widget class="QPushButton" name="face_real">
             <property name="font">
              <font>
-              <pointsize>50</pointsize>
+              <pointsize>30</pointsize>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
-             <string>人脸真伪检测</string>
+             <string>Face Detection</string>
             </property>
            </widget>
           </item>
@@ -1526,14 +1529,14 @@ background-image: url(:/media/语音识别.png);</string>
             <property name="font">
              <font>
               <family>Ubuntu</family>
-              <pointsize>50</pointsize>
+              <pointsize>30</pointsize>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
-             <string>颜色跟踪</string>
+             <string>Color Tracking</string>
             </property>
            </widget>
           </item>
@@ -1585,14 +1588,14 @@ background-image: url(:/media/语音识别.png);</string>
            <widget class="QPushButton" name="face_recongnize">
             <property name="font">
              <font>
-              <pointsize>50</pointsize>
+              <pointsize>30</pointsize>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
-             <string>人脸识别</string>
+             <string>Face Recognition</string>
             </property>
            </widget>
           </item>
@@ -1606,14 +1609,14 @@ background-image: url(:/media/语音识别.png);</string>
             </property>
             <property name="font">
              <font>
-              <pointsize>50</pointsize>
+              <pointsize>30</pointsize>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
-             <string>手部关节检测</string>
+             <string>Hand Joint Detection</string>
             </property>
            </widget>
           </item>
@@ -1633,10 +1636,13 @@ background-image: url(:/media/语音识别.png);</string>
                </font>
               </property>
               <property name="text">
-               <string>操作指南：启动后用鼠标在画面中框选要跟踪的颜色。</string>
+               <string>Operation Guide: After starting, use the mouse to select the color to be tracked in the picture.</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1687,14 +1693,14 @@ background-image: url(:/media/语音识别.png);</string>
             </property>
             <property name="font">
              <font>
-              <pointsize>50</pointsize>
+              <pointsize>30</pointsize>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
-             <string>人体关节点检测</string>
+             <string>Body Joint Detection</string>
             </property>
            </widget>
           </item>
@@ -1740,14 +1746,14 @@ background-image: url(:/media/语音识别.png);</string>
             </property>
             <property name="font">
              <font>
-              <pointsize>50</pointsize>
+              <pointsize>30</pointsize>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
-             <string>Yolo物体识别</string>
+             <string>YOLO Object Detection</string>
             </property>
            </widget>
           </item>
@@ -1783,14 +1789,14 @@ background-image: url(:/media/语音识别.png);</string>
             </property>
             <property name="font">
              <font>
-              <pointsize>50</pointsize>
+              <pointsize>30</pointsize>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
-             <string>人脸标记</string>
+             <string>Frontal Face Detection</string>
             </property>
            </widget>
           </item>
@@ -1804,7 +1810,8 @@ background-image: url(:/media/语音识别.png);</string>
                </font>
               </property>
               <property name="text">
-               <string>在输入框内输入名字，按回车后开始拍照，按y拍一张，拍5张左右按n保存。</string>
+               <string>Enter the name in the input box, press Enter to start taking pictures, press y to take a picture, take about 5 pictures and press n to save.
+</string>
               </property>
               <property name="wordWrap">
                <bool>true</bool>
@@ -1901,14 +1908,14 @@ background-image: url(:/media/语音识别.png);</string>
           </property>
           <property name="font">
            <font>
-            <pointsize>30</pointsize>
+            <pointsize>26</pointsize>
            </font>
           </property>
           <property name="layoutDirection">
            <enum>Qt::RightToLeft</enum>
           </property>
           <property name="text">
-           <string>     加载中...         </string>
+           <string>     Loading...         </string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -2078,7 +2085,7 @@ background-image: url(:/media/语音识别.png);</string>
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="text">
-                   <string>  语音提问  </string>
+                   <string>  Ask a Question  </string>
                   </property>
                  </widget>
                 </item>
@@ -2099,7 +2106,7 @@ background-image: url(:/media/语音识别.png);</string>
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="text">
-                   <string>等待结果...</string>
+                   <string>Waiting for result...</string>
                   </property>
                  </widget>
                 </item>
@@ -2143,8 +2150,8 @@ background-image: url(:/media/语音识别.png);</string>
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>98</width>
-                   <height>263</height>
+                   <width>1135</width>
+                   <height>653</height>
                   </rect>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_12">
@@ -2168,7 +2175,7 @@ background-image: url(:/media/语音识别.png);</string>
                      </font>
                     </property>
                     <property name="text">
-                     <string>请点击“语音提问”按钮开始大模型问答。</string>
+                     <string>Please click the &quot;Ask a Question&quot; button to start Q and A with LLM.</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -2234,7 +2241,7 @@ background-image: url(:/media/语音识别.png);</string>
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="text">
-                   <string>  语音提问  </string>
+                   <string>  Ask a Question  </string>
                   </property>
                  </widget>
                 </item>
@@ -2301,7 +2308,7 @@ background-image: url(:/media/语音识别.png);</string>
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="text">
-                   <string>等待结果...</string>
+                   <string>Waiting for result...</string>
                   </property>
                  </widget>
                 </item>
@@ -2336,8 +2343,8 @@ background-image: url(:/media/语音识别.png);</string>
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>98</width>
-                   <height>643</height>
+                   <width>142</width>
+                   <height>422</height>
                   </rect>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_14">
@@ -2355,7 +2362,7 @@ background-image: url(:/media/语音识别.png);</string>
                      </font>
                     </property>
                     <property name="text">
-                     <string>请点击“语音提问”按钮开始大模型问答。如：描述一下你看到的场景。</string>
+                     <string>Please click the &quot;Ask a Question&quot; button to start Q and A with LLM. For example: Describe the scene you see.</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -2462,14 +2469,14 @@ background-image: url(:/media/语音识别.png);</string>
             </property>
             <property name="font">
              <font>
-              <pointsize>50</pointsize>
+              <pointsize>35</pointsize>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
-             <string>  大模型问答  </string>
+             <string>  Q and A with LLM  </string>
             </property>
            </widget>
           </item>
@@ -2483,14 +2490,14 @@ background-image: url(:/media/语音识别.png);</string>
             </property>
             <property name="font">
              <font>
-              <pointsize>50</pointsize>
+              <pointsize>35</pointsize>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="text">
-             <string>大模型视觉交互</string>
+             <string>Vision-Text with VLM</string>
             </property>
            </widget>
           </item>
@@ -2508,11 +2515,11 @@ background-image: url(:/media/语音识别.png);</string>
              <widget class="QLabel" name="label_8">
               <property name="font">
                <font>
-                <pointsize>30</pointsize>
+                <pointsize>20</pointsize>
                </font>
               </property>
               <property name="text">
-               <string>点击按钮，启动后举起右手，张开手指即可开始倒计时拍照。</string>
+               <string>Click the button, raise your right hand and spread your fingers to start the countdown to take pictures.</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -2539,6 +2546,35 @@ background-image: url(:/media/语音识别.png);</string>
              </spacer>
             </item>
            </layout>
+          </item>
+          <item row="5" column="2">
+           <widget class="QLabel" name="label_17">
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Once opened, move the windows to avoid overlap. Use your right forearm to control the turtle's movement. Raising your elbow above your shoulder will create a special effect!
+</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <spacer name="verticalSpacer_20">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
           </item>
           <item row="2" column="0">
            <spacer name="horizontalSpacer_4">
@@ -2568,55 +2604,6 @@ background-image: url(:/media/语音识别.png);</string>
              <size>
               <width>20</width>
               <height>40</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="2" column="2">
-           <widget class="QPushButton" name="o6_1">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>167777</width>
-              <height>1677777</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>50</pointsize>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="text">
-             <string>     手势拍照     </string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="3">
-           <spacer name="horizontalSpacer_9">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Expanding</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
              </size>
             </property>
            </spacer>
@@ -2678,7 +2665,7 @@ background-image: url(:/media/语音识别.png);</string>
                </font>
               </property>
               <property name="text">
-               <string>加载中...</string>
+               <string>Loading...</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -2686,21 +2673,6 @@ background-image: url(:/media/语音识别.png);</string>
              </widget>
             </item>
            </layout>
-          </item>
-          <item row="4" column="2">
-           <widget class="QPushButton" name="pose_turlte">
-            <property name="font">
-             <font>
-              <pointsize>50</pointsize>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="text">
-             <string>姿态控制小海龟</string>
-            </property>
-           </widget>
           </item>
           <item row="2" column="1">
            <widget class="QLabel" name="label">
@@ -2730,31 +2702,67 @@ background-image: url(:/media/语音识别.png);</string>
             </property>
            </widget>
           </item>
-          <item row="6" column="2">
-           <spacer name="verticalSpacer_20">
+          <item row="4" column="2">
+           <widget class="QPushButton" name="pose_turlte">
+            <property name="font">
+             <font>
+              <pointsize>35</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Gesture Control of a Little Turtle</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <spacer name="horizontalSpacer_9">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>20</width>
-              <height>40</height>
+              <width>40</width>
+              <height>20</height>
              </size>
             </property>
            </spacer>
           </item>
-          <item row="5" column="2">
-           <widget class="QLabel" name="label_17">
+          <item row="2" column="2">
+           <widget class="QPushButton" name="o6_1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>167777</width>
+              <height>1677777</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>30</pointsize>
+              <pointsize>35</pointsize>
              </font>
             </property>
-            <property name="text">
-             <string>开启后移动窗口避免重合。通过右手小臂朝向控制小海龟移动。手肘举过肩膀还会有特殊效果哦！</string>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
             </property>
-            <property name="wordWrap">
-             <bool>true</bool>
+            <property name="text">
+             <string>     Gesture Photo Taking     </string>
             </property>
            </widget>
           </item>

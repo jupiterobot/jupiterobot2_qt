@@ -17,14 +17,14 @@ class qwen_chat(object):
 
     def qwen_llm(self, question):
         client = OpenAI(
-            api_key="sk-184336ce18704d34a3b75e147039f05d",
+            api_key="Insert your API Key here",
             base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
         )
 
         completion = client.chat.completions.create(
             model="qwen3-32b",
             messages=[
-                {"role": "system", "content": "你的名字是木星机器人,拥有人工智能相关的技能，如语音方面：语音合成、语音识别。图像方面：人脸检测、物体识别、人体姿态识别等。机械臂控制。建图与导航。人机交互等方面的技能。只回答语言不加动作。"},
+                {"role": "system", "content": "Your name is Jupiter Robot. You possess AI-related skills, such as speech synthesis and speech recognition, image processing (face detection, object recognition, and human posture recognition), robotic arm control, mapping and navigation, and human-computer interaction. Your answers are verbal, not action-based."},
                 {"role": "user", "content": question},
             ],
             stream=True,
@@ -36,14 +36,14 @@ class qwen_chat(object):
         full_response = ""
         in_reasoning = True  # 是否还在输出 reasoning 阶段
 
-        print('\n=== 问题 ===\n')
+        print('\n=== Question ===\n')
 
         print(question)
         self.qwen_msg.data = question
         self.pub_q.publish(self.qwen_msg)
 
-        print('\n=== 思考 ===\n')
-        self.qwen_msg.data = "\n=== 思考 ===\n"
+        print('\n=== Think ===\n')
+        self.qwen_msg.data = "\n=== Think ===\n"
         rospy.sleep(0.4)
         self.pub.publish(self.qwen_msg)
         for chunk in completion:
@@ -58,8 +58,8 @@ class qwen_chat(object):
                 else:
                     # 开始正式输出 content，切换标志位
                     if in_reasoning:
-                        print("\n=== 正式回答 ===\n")
-                        self.qwen_msg.data = "\n=== 正式回答 ===\n"
+                        print("\n=== Formal Answer ===\n")
+                        self.qwen_msg.data = "\n=== Formal Answer ===\n"
                         self.pub.publish(self.qwen_msg)
                         in_reasoning = False
                     print(choice.content, end='', flush=True)
