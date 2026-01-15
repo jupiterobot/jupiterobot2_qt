@@ -17,7 +17,7 @@ class qwen_chat(object):
 
     def qwen_llm(self, question):
         client = OpenAI(
-            api_key="Insert your API Key here",
+            api_key="sk-184336ce18704d34a3b75e147039f05d",
             base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
         )
 

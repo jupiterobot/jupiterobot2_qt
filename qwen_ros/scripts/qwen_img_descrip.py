@@ -16,12 +16,12 @@ class qwen_img_chat(object):
 
         # 初始化 OpenAI 客户端（使用 DashScope）
         self.client = OpenAI(
-            api_key="Insert your API Key here",
+            api_key="sk-184336ce18704d34a3b75e147039f05d",
             base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
         )
 
         # 图像保存路径
-        self.SAVE_PATH = "/home/mustar/catkin_ws/src/jupiterobot2_qt/qwen_pictures/image.png"
+        self.SAVE_PATH = "/home/mustar/catkin_ws/src/jupiterobot2/jupiterobot2_qt/qwen_pictures/image.png"
 
         rospy.init_node('image_to_qwen_node', anonymous=True)
         self.bridge = CvBridge()

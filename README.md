@@ -1,2 +1,2 @@
 # jupiterobot2_qt
-Demo GUI
+Demo GUI (English)
